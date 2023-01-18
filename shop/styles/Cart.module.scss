@@ -1,0 +1,98 @@
+@import "./styles.scss";
+
+.divCart{
+    display: flex;
+    border-radius: 1rem;
+    position: fixed;
+    flex-direction: column;
+    height: 70%;
+    max-height: 80%;
+    width: 90%;
+    background-color: $Redesign-1-rgba;
+    top: 6rem;
+    left:15%;
+    color: $font-color;
+    padding:1rem;
+   overflow: scroll;
+   transition: all 0.5s;
+   animation: showCart 1s ease-in-out forwards;
+   transform: translateX(10rem);
+
+   transition: all 0.5s;
+   
+   @keyframes showCart {
+   
+    to{
+        transform: translateX(0);
+
+    }
+   }
+   
+ p{
+    display:flex;
+    justify-content: space-between;
+    
+    &.p{
+        align-items: center;
+        margin:0rem auto;
+    
+    }
+    i{
+        font-size: 2rem;
+    
+     }
+ }
+    section{
+        margin-top : 2rem;
+        display: flex;
+        flex-direction: row ;
+        align-items: center;       
+        
+        span{
+            width:100%;
+            text-align: center;
+
+            h3{
+                color: $Redesign-3-rgba;
+            }
+            h4{
+                color: $Redesign-4-rgba;
+            }
+        }
+
+        i{
+            vertical-align: middle;
+            padding:1rem;
+            font-size: 2rem;
+        }
+    }
+
+    img{
+        border-radius: 0.5rem;
+        width: 6rem !important;
+        max-width:8rem
+    }
+    a{
+        margin-top: 1rem;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        border:none;
+        background-color: $Redesign-2-rgba;
+        font-weight: 700;
+        color: $Redesign-4-rgba;
+    }
+    
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .divCart{
+        position: unset;
+        width: 80%;
+        margin: 8rem auto;
+        animation-duration: 0.5s;
+    }
+}

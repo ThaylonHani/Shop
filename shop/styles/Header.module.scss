@@ -1,0 +1,97 @@
+@import "./styles.scss";
+
+
+
+.header {
+  display: flex;
+  background-color: $Redesign-1-rgba;
+  position: sticky;
+  top: 0;
+  color: $font-color;
+
+  max-width: 100%;
+  z-index: 2;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+  border-bottom: 2px solid $Redesign-5-rgba;
+  @keyframes showHeader {
+    to{
+      transform: translateY(0)
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    > i {
+      display: block;
+     
+    }
+  }
+  i {
+    font-size: 2em;
+    vertical-align: middle;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: $Redesign-2-rgba;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-6rem);
+    animation: showHeader 0.2s linear forwards;
+    text-align: center;
+    
+    ul {
+      list-style: none;
+      padding: 0rem;
+      
+      
+      li {
+        padding: 2rem;
+          font-size: 1.5em;
+          font-weight: 700;
+          color: $font-color;
+          
+        }
+      }
+
+  }
+
+  @media screen and (min-width: 480px) {
+  
+
+    
+    
+
+    nav {
+      display: block;
+      animation: none;
+      position: unset;
+      width: 100%;
+      height:100%;
+      background-color: transparent;
+      transform: translateX(0);
+      
+      ul{
+        display: flex;
+        justify-content: end;
+        margin:0;
+        gap:1rem;
+        li{
+          text-align: center;
+          font-size: 1em;
+        padding:0;
+      }
+    }
+    }
+    i{
+      display: none;
+    }
+  }
+  
+}

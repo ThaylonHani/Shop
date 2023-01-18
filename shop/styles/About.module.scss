@@ -1,0 +1,75 @@
+@import "./styles.scss";
+
+.about {
+  display: grid;
+  grid-template-columns:repeat(1, 0.5fr 1.5fr);
+  width: 100vw;
+  section {
+    width: 100%;
+
+    ol{
+        width: 100%;
+        li{
+            color: $Redesign-5-rgba;
+            text-align: center;
+            padding:1rem;
+            margin-top: 2rem;
+            width: 100%;
+            font-size: 1.3rem;
+            border-bottom: 3px dotted $Redesign-5-rgba;
+
+            &::marker{
+                
+                color:$Redesign-4-rgba;
+            }
+        };
+        p{
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+
+            a{
+              border-bottom: 2px solid $Redesign-5-rgba;
+            }
+        }
+    }
+  }
+ .test{
+    overflow-y: scroll;
+    height: 145vw;
+ }
+  .topics {
+    height:100%;
+    width: 100%;
+    display: flex;
+    border-right: 2px solid $Redesign-5-rgba;
+    border-bottom: 2px solid $Redesign-5-rgba;
+    ul {
+        width: 100% ;
+        max-height: 30%;
+        margin-top:2rem;
+        justify-content: top;
+        padding: 1rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        list-style: none;
+        
+
+    li {
+      margin-top:1rem;
+      font-size: large;
+
+
+      &:hover{
+        color:$Redesign-4-rgba;
+      }
+    }
+  }
+}
+
+
+}
+
+
